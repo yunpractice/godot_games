@@ -1,0 +1,124 @@
+[gd_scene load_steps=14 format=3 uid="uid://cooqbmp5o4pco"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_rl1dj"]
+[ext_resource type="Texture2D" uid="uid://cmgwp4u18n8eh" path="res://bg.jpg" id="1_uvjnn"]
+[ext_resource type="Script" path="res://Bird.gd" id="5_5bc6j"]
+[ext_resource type="Texture2D" uid="uid://bmvuxx60vak8" path="res://bird.png" id="5_ohnah"]
+[ext_resource type="Texture2D" uid="uid://dexbm3j4tpy1k" path="res://back.png" id="7_0tbcv"]
+[ext_resource type="Script" path="res://Timer.gd" id="7_xa7kh"]
+[ext_resource type="Script" path="res://floor.gd" id="8_jr326"]
+[ext_resource type="Texture2D" uid="uid://4i7n3d41nlbo" path="res://menu.png" id="8_t5ibr"]
+
+[sub_resource type="Animation" id="Animation_vdtq4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_2fqrl"]
+resource_name = "new_animation"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nrlvr"]
+_data = {
+"RESET": SubResource("Animation_vdtq4"),
+"new_animation": SubResource("Animation_2fqrl")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gxrc"]
+size = Vector2(40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eo2h8"]
+size = Vector2(2000, 40)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_rl1dj")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(577, 326)
+scale = Vector2(3.04762, 1.2067)
+texture = ExtResource("1_uvjnn")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(575, 294)
+disable_mode = 2
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("5_5bc6j")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("5_ohnah")
+hframes = 3
+frame = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RigidBody2D/Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_nrlvr")
+}
+autoplay = "new_animation"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+light_mask = 3
+visibility_layer = 3
+shape = SubResource("RectangleShape2D_0gxrc")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+script = ExtResource("7_xa7kh")
+
+[node name="Node2D" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1178, 254)
+
+[node name="Back" type="Sprite2D" parent="."]
+top_level = true
+light_mask = 2
+visibility_layer = 2
+position = Vector2(796, 382)
+scale = Vector2(3, 1)
+texture = ExtResource("7_0tbcv")
+script = ExtResource("8_jr326")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Back"]
+light_mask = 0
+visibility_layer = 0
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Back/StaticBody2D"]
+light_mask = 0
+visibility_layer = 0
+position = Vector2(0, 140)
+shape = SubResource("RectangleShape2D_eo2h8")
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="Menu" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(578, 100)
+texture = ExtResource("8_t5ibr")
+region_enabled = true
+region_rect = Rect2(0, 0, 400, 200)

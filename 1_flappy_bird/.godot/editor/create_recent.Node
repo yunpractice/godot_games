@@ -1,0 +1,14 @@
+Node2D
+Window
+Node
+Timer
+Area2D
+CollisionShape2D
+RigidBody2D
+StaticBody2D
+CharacterBody2D
+AnimationPlayer
+Sprite2D
+AnimatedSprite2D
+Label
+Button

@@ -1,0 +1,8 @@
+res://node_2d.tscn
+res://CharacterBody2D.gd
+res://Bird.gd
+res://RigidBody2D.gd
+res://floor.gd
+res://node_2d.gd
+res://pipe.tscn
+res://Timer.gd
