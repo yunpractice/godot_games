@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3vc7nyog1a8l"]
+
+[ext_resource type="Texture2D" uid="uid://bdr073nci55kb" path="res://tilemap.png" id="1_mydmg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ds41y"]
+font_size = 24
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(20, 20)
+scale = Vector2(2, 2)
+texture = ExtResource("1_mydmg")
+region_enabled = true
+region_rect = Rect2(75, 40, 20, 18)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(60, 20)
+scale = Vector2(2, 2)
+texture = ExtResource("1_mydmg")
+region_enabled = true
+region_rect = Rect2(75, 40, 20, 18)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(100, 20)
+scale = Vector2(2, 2)
+texture = ExtResource("1_mydmg")
+region_enabled = true
+region_rect = Rect2(75, 40, 20, 18)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1081.0
+offset_top = 6.0
+offset_right = 1196.0
+offset_bottom = 40.0
+text = "金币：0"
+label_settings = SubResource("LabelSettings_ds41y")
