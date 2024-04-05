@@ -1,0 +1,372 @@
+[gd_scene load_steps=16 format=3 uid="uid://d1metwkuvor6k"]
+
+[ext_resource type="Texture2D" uid="uid://bdr073nci55kb" path="res://tilemap.png" id="1_cusus"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="4_appht"]
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="4_u1buv"]
+[ext_resource type="AudioStream" uid="uid://r3ts7ab0qg41" path="res://1179930803.mp3" id="5_vvim3"]
+[ext_resource type="Texture2D" uid="uid://h0ra0ek0bs57" path="res://attack/attack2_副本.png" id="7_h82ft"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7dbwf"]
+texture = ExtResource("1_cusus")
+separation = Vector2i(3, 3)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+22:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+22:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+22:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+21:7/0 = 0
+22:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+21:8/0 = 0
+22:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+21:9/0 = 0
+22:9/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_cww5i"]
+sources/0 = SubResource("TileSetAtlasSource_7dbwf")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5qru"]
+size = Vector2(1800, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nja6d"]
+size = Vector2(20, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mmhh"]
+size = Vector2(96, 16)
+
+[sub_resource type="Animation" id="Animation_gvna6"]
+resource_name = "attack"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cponi"]
+resource_name = "idle"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 2), Vector2i(1, 2), Vector2i(2, 2), Vector2i(3, 2), Vector2i(4, 2), Vector2i(5, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_aq0s4"]
+resource_name = "walk"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.9, 1.4, 1.9, 2.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 1), Vector2i(1, 1), Vector2i(2, 1), Vector2i(3, 1), Vector2i(4, 1), Vector2i(5, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5blaq"]
+_data = {
+"attack": SubResource("Animation_gvna6"),
+"idle": SubResource("Animation_cponi"),
+"walk": SubResource("Animation_aq0s4")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xqejm"]
+radius = 28.0
+height = 90.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_cww5i")
+format = 2
+layer_0/tile_data = PackedInt32Array(1048576, 262144, 6, 1114112, 65536, 0, 1114113, 131072, 0, 1114114, 131072, 0, 1114115, 131072, 0, 1048580, 524288, 4, 1114116, 131072, 0, 1114117, 131072, 0, 1114118, 131072, 0, 1048583, 524288, 6, 1114119, 131072, 0, 1048584, 524288, 6, 1114120, 131072, 0, 1114121, 131072, 0, 1114122, 131072, 0, 917515, 1048576, 4, 983051, 1048576, 5, 1048587, 1048576, 6, 1114123, 131072, 0, 1114124, 131072, 0, 1114125, 131072, 0, 1114126, 131072, 0, 1114127, 851968, 2, 983056, 65536, 2, 1114128, 851968, 2, 983057, 131072, 2, 1114129, 851968, 2, 983058, 131072, 2, 1114130, 851968, 2, 1114131, 851968, 2, 983060, 65536, 2, 1114132, 851968, 2, 983061, 131072, 2, 1114133, 851968, 2, 983062, 196608, 2, 1114134, 851968, 2, 1114135, 851968, 2, 1114136, 65536, 1, 1114137, 131072, 1, 1114138, 131072, 1, 1114139, 131072, 1, 1114140, 131072, 1, 1114141, 196608, 1, 1048606, 458752, 1, 1114142, 131072, 1, 1114143, 131072, 1, 1114144, 131072, 1, 1114145, 131072, 1, 1048610, 524288, 1, 1114146, 131072, 1, 1114147, 131072, 1, 1114148, 131072, 1, 1114149, 131072, 1, 1114150, 131072, 1, 1114151, 131072, 1, 1114152, 131072, 1, 1114153, 131072, 1, 1114154, 131072, 1, 1114155, 131072, 1, 1114156, 131072, 1, 1114157, 131072, 1, 983086, 393216, 1, 1048622, 393216, 1, 1114158, 131072, 1, 1114159, 131072, 1, 1114160, 131072, 1, 1114161, 131072, 1, 1114162, 131072, 1, 1114163, 131072, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(816, 561)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(85, -3)
+shape = SubResource("RectangleShape2D_w5qru")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-822, -93)
+shape = SubResource("RectangleShape2D_nja6d")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-257, -66)
+shape = SubResource("RectangleShape2D_7mmhh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-123, -67)
+shape = SubResource("RectangleShape2D_7mmhh")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(71, 503)
+script = ExtResource("4_u1buv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+root_node = NodePath("../Sprite2D2")
+libraries = {
+"": SubResource("AnimationLibrary_5blaq")
+}
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_xqejm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("7_h82ft")
+offset = Vector2(-20, 0)
+flip_h = true
+hframes = 8
+vframes = 8
+frame = 3
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("4_appht")
+target_node_path = NodePath("../CharacterBody2D")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_vvim3")
+autoplay = true

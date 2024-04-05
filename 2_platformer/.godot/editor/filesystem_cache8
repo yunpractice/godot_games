@@ -1,0 +1,38 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1712253686
+1179930803.mp3::AudioStreamMP3::1252200366939760444::1712253686::1712253692::1::::<><>::
+icon.svg::CompressedTexture2D::5294141219612262096::1712235123::1712235129::1::::<><>::
+node_2d.tscn::PackedScene::9009222488671211180::1712253318::0::1::::<><>::uid://bdr073nci55kb::::res://tilemap.png<>res://Camera2D.gd<>res://CharacterBody2D.gd<>uid://r3ts7ab0qg41::::res://1179930803.mp3<>uid://h0ra0ek0bs57::::res://attack/attack2_副本.png
+player.gd::GDScript::-1::1712248785::0::1::::<>RigidBody2D<>::
+CharacterBody2D.gd::GDScript::-1::1712251562::0::1::::<>CharacterBody2D<>::
+Camera2D.gd::GDScript::-1::1712252923::0::1::::<>Camera2D<>::
+tilemap.png::CompressedTexture2D::2633658197489369789::1712235396::1712235396::1::::<><>::
+::res://attack/::1712243052
+attack2_副本.png::CompressedTexture2D::543964857945546044::1712243034::1712243052::1::::<><>::
+::res://idle/::1712238551
+idle1.png::CompressedTexture2D::6100111077108792308::1712238486::1712238551::1::::<><>::
+idle2.png::CompressedTexture2D::5983307942949163407::1712238486::1712238551::1::::<><>::
+idle3.png::CompressedTexture2D::4931345438143165874::1712238486::1712238551::1::::<><>::
+idle4.png::CompressedTexture2D::7474232810375767734::1712238486::1712238551::1::::<><>::
+idle5.png::CompressedTexture2D::67579542977270324::1712238486::1712238551::1::::<><>::
+idle6.png::CompressedTexture2D::4514782677807315528::1712238486::1712238551::1::::<><>::
+idle7.png::CompressedTexture2D::2198478143830993994::1712238486::1712238551::1::::<><>::
+idle8.png::CompressedTexture2D::7247083082965007697::1712238486::1712238551::1::::<><>::
+idle9.png::CompressedTexture2D::1178664649148565976::1712238486::1712238551::1::::<><>::
+idle10.png::CompressedTexture2D::6697249089585853946::1712238486::1712238551::1::::<><>::
+idle12.png::CompressedTexture2D::487259483250585919::1712238486::1712238551::1::::<><>::
+idle13.png::CompressedTexture2D::7655025378772912482::1712238486::1712238551::1::::<><>::
+idle14.png::CompressedTexture2D::3087848240002045660::1712238486::1712238551::1::::<><>::
+idle15.png::CompressedTexture2D::8525181330116816016::1712238486::1712238551::1::::<><>::
+idle16.png::CompressedTexture2D::8090924922280323661::1712238486::1712238551::1::::<><>::
+idle17.png::CompressedTexture2D::5572668160949117434::1712238486::1712238551::1::::<><>::
+idle18.png::CompressedTexture2D::7136839658204177459::1712238486::1712238551::1::::<><>::
+::res://walk/::1712237796
+walking w0000.bmp::CompressedTexture2D::5599564732873743010::1712237644::1712237796::1::::<><>::
+walking w0001.bmp::CompressedTexture2D::1841754053792027220::1712237644::1712237796::1::::<><>::
+walking w0002.bmp::CompressedTexture2D::8331101827932482695::1712237644::1712237796::1::::<><>::
+walking w0003.bmp::CompressedTexture2D::2491360825449905627::1712237644::1712237796::1::::<><>::
+walking w0004.bmp::CompressedTexture2D::5291961351895302628::1712237644::1712237796::1::::<><>::
+walking w0005.bmp::CompressedTexture2D::1498934026278710658::1712237644::1712237796::1::::<><>::
+walking w0006.bmp::CompressedTexture2D::4821417706549945859::1712237644::1712237796::1::::<><>::
+walking w0007.bmp::CompressedTexture2D::3170381685497804154::1712237644::1712237796::1::::<><>::
