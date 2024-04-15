@@ -1,8 +1,10 @@
+AnimationTree
+AudioStreamPlayer
+CollisionShape2D
+Area2D
+RigidBody2D
 AnimationPlayer
 Sprite2D
-CollisionShape2D
-RigidBody2D
-Area2D
 Label
 CanvasLayer
 AudioStreamPlayer2D
@@ -11,4 +13,3 @@ Camera2D
 CharacterBody2D
 StaticBody2D
 AnimatedSprite2D
-TileMap

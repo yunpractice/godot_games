@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://dnv7fwj8mnmb7"]
+
+[ext_resource type="Script" path="res://one.gd" id="1_chgv7"]
+[ext_resource type="Texture2D" uid="uid://c4cp1ll4e7p82" path="res://one.png" id="2_6f7ee"]
+[ext_resource type="AudioStream" uid="uid://dn806bhfjr5t4" path="res://be_attack.wav" id="3_yuocs"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5qnio"]
+radius = 25.0
+height = 50.0
+
+[sub_resource type="Animation" id="Animation_o3vnv"]
+resource_name = "move_left"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 1), Vector2i(1, 1), Vector2i(2, 1), Vector2i(3, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_boywo"]
+resource_name = "be_attack"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.1,
+"stream": ExtResource("3_yuocs")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vkxud"]
+_data = {
+"be_attack": SubResource("Animation_boywo"),
+"move_left": SubResource("Animation_o3vnv")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f45hx"]
+size = Vector2(20, 40)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2(435, 139)
+lock_rotation = true
+script = ExtResource("1_chgv7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 9
+visibility_layer = 9
+position = Vector2(0, 10)
+shape = SubResource("CapsuleShape2D_5qnio")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_6f7ee")
+hframes = 4
+vframes = 4
+frame = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vkxud")
+}
+autoplay = "move_left"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+light_mask = 8
+visibility_layer = 8
+shape = SubResource("RectangleShape2D_f45hx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yuocs")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

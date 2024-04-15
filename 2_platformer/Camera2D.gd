@@ -21,5 +21,5 @@ func _ready():
 func _process(delta):
 	# 更新镜头位置，使其跟随目标对象
 	var x = follow_target1.position.x
-	if x < 650 and x > 60:
+	if x < 650 and x > 30:
 		self.position.x = follow_target1.position.x + offset1

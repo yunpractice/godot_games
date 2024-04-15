@@ -1,7 +1,5 @@
 res://node_2d.tscn
-res://ui.tscn
-res://Camera2D.gd
 res://CharacterBody2D.gd
-res://global.gd
-res://AudioManager.gd
+res://ui.tscn
+res://enemy.tscn
 res://one.gd
